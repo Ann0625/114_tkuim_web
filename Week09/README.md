@@ -1,12 +1,10 @@
-# Week09 Lab：報名 API + 測試流程
-
-這是資管 3C 網路程式設計 Week09 的作業繳交內容。
+# Week09 Lab：API + 測試流程
 
 ## 專案完成項目
-- [x] 後端 API 開發 (Express + RESTful)  
-- [x] 前端表單串接 (Fetch API)  
-- [x] 防止重複送出與 Loading 狀態  
-- [x] 建立測試流程 (Postman + PowerShell)  
+- 後端 API 開發 (Express + RESTful)  
+- 前端表單串接 (Fetch API)  
+- 防止重複送出與 Loading 狀態  
+- 建立測試流程 (Postman + PowerShell)  
 
 ---
 
@@ -59,6 +57,9 @@ Server ready on http://localhost:3001
 ```powershell
 Invoke-RestMethod -Uri http://localhost:3001/api/signup -Method POST -ContentType "application/json" -Body '{"name":"Test","email":"t@t.com","phone":"0912345678","password":"123","confirmPassword":"123","terms":true,"interests":["Backend"]}'
 ```
+```CMD
+curl -X POST http://localhost:3001/api/signup -H "Content-Type: application/json" -d "{\"name\":\"CMD Test\",\"email\":\"cmd@test.com\",\"phone\":\"0912345678\",\"password\":\"1234567890\",\"confirmPassword\":\"1234567890\",\"interests\":[\"CMD\"],\"terms\":true}"
+```
 
 2. 測試 GET (查看清單)
 ```powershell
@@ -66,5 +67,3 @@ Invoke-RestMethod -Uri http://localhost:3001/api/signup
 ```
 
 ---
-
-如需額外範例或 Postman 匯出檔，請告知以補上。
