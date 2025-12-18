@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>報名系統</title>
+    <style>.hidden { display: none; } body { font-family: sans-serif; }</style>
+</head>
+<body>
+    <div id="auth-box">
+        <h2>登入</h2>
+        <input type="email" id="le" placeholder="Email">
+        <input type="password" id="lp" placeholder="密碼">
+        <button onclick="login()">登入</button>
+    </div>
+    <div id="main-box" class="hidden">
+        <h2>歡迎 <span id="uinfo"></span> <button onclick="logout()">登出</button></h2>
+        <form id="sign-form">
+            <input type="text" id="n" placeholder="姓名" required>
+            <input type="email" id="e" placeholder="Email" required>
+            <input type="text" id="p" placeholder="電話" required>
+            <button type="submit">送出</button>
+        </form>
+        <ul id="list"></ul>
+    </div>
+    <script src="login.js"></script>
+    <script src="signup_form.js"></script>
+</body>
+</html>
